@@ -24,10 +24,8 @@ def main():
     predict = False
     model = load_model('model')
 
-    '''labels = ['paper', 'cardboard', 'plastic', 'metal', 'food', 'battery',
-              'shoes', 'clothes', 'glass','medical']'''
-
-    labels = ['battery', 'cardboard', 'clothes', 'food', 'glass', 'medical', 'metal', 'paper', 'plastic', 'shoes'] 
+    labels = ['paper', 'cardboard', 'plastic', 'metal', 'food', 'battery',
+              'shoes', 'clothes', 'glass','medical']
 
     with header:
         st.title("Waste Classification Project")
