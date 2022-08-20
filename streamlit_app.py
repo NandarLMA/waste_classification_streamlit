@@ -15,10 +15,11 @@ def main():
     upload_image = st.container()
     show_image = st.container()
     image = None
-    #img_size = 512
+    img_size = 512
     width, height, channel = 298, 384, 3
     predict = False
-    model = load_model('model804.h5')
+    model_link = 'https://drive.google.com/file/d/1__ezWpxxzR8qbmucBiELmXk4OGQLm2Od/view?usp=sharing'
+    model = load_model(model_link)
     labels = ['cardboard','metal','paper','plastic','trash','green-glass','white-glass','brown-glass','clothes',
     'biological','battery','shoes']
     with header:
