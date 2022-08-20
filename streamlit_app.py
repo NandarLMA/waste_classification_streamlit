@@ -18,8 +18,7 @@ def main():
     img_size = 512
     width, height, channel = 298, 384, 3
     predict = False
-    model_link = 'model804.h5'
-    model = load_model(model_link)
+    model = load_model('model804.h5')
     labels = ['cardboard','metal','paper','plastic','trash','green-glass','white-glass','brown-glass','clothes',
     'biological','battery','shoes']
     with header:
