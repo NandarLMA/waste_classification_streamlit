@@ -18,7 +18,7 @@ def main():
     img_size = 512
     width, height, channel = 298, 384, 3
     predict = False
-    model_link = 'https://drive.google.com/file/d/1__ezWpxxzR8qbmucBiELmXk4OGQLm2Od/view?usp=sharing'
+    model_link = 'model804.h5'
     model = load_model(model_link)
     labels = ['cardboard','metal','paper','plastic','trash','green-glass','white-glass','brown-glass','clothes',
     'biological','battery','shoes']
