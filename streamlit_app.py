@@ -38,6 +38,10 @@ def main():
             "SDG goals of 3 (Good Health & Well Being), 6(Clean Water & Sanitation) and "
             "11(Sustainable Cities & Communities)."
         )
+        st.markdown(
+            "10 types of waste can be classified in this project - battery, cardboard, clothes, food," 
+            "glass, medical, metal, paper, plastic and shoes" 
+        )
 
     with upload_image:
         image = st.file_uploader("Choose An Image File:", type=[
