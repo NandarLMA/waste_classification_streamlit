@@ -57,13 +57,14 @@ def main():
         image = cv.resize(image, (width, height))
         img = image.reshape(-1, width, height, channel)
         img = img/255
-        val = model.predict(img)
-        print(val[0])
+        pred = model.predict(img)
+        st.subheader(f'output: {pred.argmax[1]}')
+        #print(pred.argmax[1])
         _, col2, _ = st.columns([2,6,2])
         with col2:
-            st.subheader(f'output: {labels[np.argmax(val[0])]}')
+            st.subheader(f'output: {labels[np.argmax(pred[0])]}')
             chart_data = pd.DataFrame(
-                val[0])
+                pred[0])
             st.bar_chart(chart_data)
 
 if __name__ == "__main__":
