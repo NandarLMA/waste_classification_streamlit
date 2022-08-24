@@ -24,8 +24,7 @@ def main():
     predict = False
     model = load_model('model')
 
-    labels = ['paper', 'cardboard', 'plastic', 'metal', 'food', 'battery',
-              'shoes', 'clothes', 'glass','medical']
+    labels = ['battery','cardboard','clothes','food','glass','medical','metal','paper','plastic','shoes']
 
     with header:
         st.title("Waste Classification Project")
@@ -56,18 +55,13 @@ def main():
         image = np.array(image.convert("RGB"))
         image = cv.resize(image, (width, height))
         img = image.reshape(-1, width, height, channel)
-        img = img/255
-        pred = model.predict(img)
-        st.subheader(f'output: {pred.argmax[1]}')
-        #print(pred.argmax[1])
+        pred = model.predict(img)[0]
         _, col2, _ = st.columns([2,6,2])
         with col2:
-            st.subheader(f'output: {labels[np.argmax(pred[0])]}')
+            st.subheader(f'output: {labels[np.argmax(pred)]}')
             chart_data = pd.DataFrame(
-                pred[0])
+                pred,,index=labels)
             st.bar_chart(chart_data)
 
 if __name__ == "__main__":
     main()
-    #,index=labels
-            #.convert("RGB")
