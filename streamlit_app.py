@@ -53,7 +53,7 @@ def main():
     
     if predict == True:
         image = Image.open(image)
-        image = np.array(image)
+        image = np.array(image.convert("RGB"))
         image = cv.resize(image, (width, height))
         img = image.reshape(-1, width, height, channel)
         img = img/255
