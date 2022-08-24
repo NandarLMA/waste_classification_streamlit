@@ -60,7 +60,7 @@ def main():
         with col2:
             st.subheader(f'output: {labels[np.argmax(pred)]}')
             chart_data = pd.DataFrame(
-                pred,,index=labels)
+                pred,index=labels)
             st.bar_chart(chart_data)
 
 if __name__ == "__main__":
