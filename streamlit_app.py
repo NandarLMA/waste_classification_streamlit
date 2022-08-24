@@ -40,7 +40,7 @@ def main():
         )
         st.markdown(
             "10 types of waste can be classified in this project - battery, cardboard, clothes, food," 
-            "glass, medical, metal, paper, plastic and shoes" 
+            "glass, medical, metal, paper, plastic and shoes." 
         )
 
     with upload_image:
